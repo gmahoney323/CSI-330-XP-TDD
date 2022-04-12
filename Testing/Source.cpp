@@ -1,6 +1,6 @@
 using namespace std;
 
-class coolClass {
+class closeClass {
 public:
 	bool thisIsTrue() {
 		return true;
