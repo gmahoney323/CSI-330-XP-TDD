@@ -27,7 +27,7 @@ namespace NumTest
 		// maybe have a funny message get printed to console each time program gets mad
 		TEST_METHOD(TestAnger) {
 			// 0 = starting anger
-			// will likely do this by checking in input function
+			// will do this normally by checking in input function
 			StringConverter str;
 			str.increaseAnger(1);
 			str.increaseAnger(3);
@@ -57,7 +57,7 @@ namespace NumTest
 		// maybe for some flavor, have the output be a vaguely passive aggressive message, like the sample I give here
 		TEST_METHOD(TestReConvert) {
 			// 0 = starting anger
-			StringConverter str = new StringConverter();
+			StringConverter str;
 			string expected = "This SHOULD be one two.";
 			string actual = str.reConvert(12);
 			Assert::AreEqual(expected, actual);
