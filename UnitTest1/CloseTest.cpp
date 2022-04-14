@@ -13,7 +13,7 @@ namespace NumTest
 		// Grant's tests
 		TEST_METHOD(TestConvertInput)
 		{
-			StringConverter str = new StringConverter(0);
+			StringConverter str;
 			int expected = 123;
 			// might want to separate getting input and actual conversion into two methods
 			int actual = str.convertStringInput("one two three");
@@ -28,7 +28,7 @@ namespace NumTest
 		TEST_METHOD(TestAnger) {
 			// 0 = starting anger
 			// will likely do this by checking in input function
-			StringConverter str = new StringConverter(0);
+			StringConverter str;
 			str.increaseAnger(1);
 			str.increaseAnger(3);
 			str.increaseAnger(1);
@@ -36,11 +36,11 @@ namespace NumTest
 			int actual = str.getAnger();
 			Assert::AreEqual(expected, actual);
 		}
-
+		/*
 		// Collin's tests
 		TEST_METHOD(TestAddition)
 		{
-			StringConverter str = new StringConverter(0);
+			StringConverter str;
 
 			// maybe have it consider whether the second number should be + or - based on 'plus' or 'minus'
 			string expected1 = 17;
@@ -57,12 +57,12 @@ namespace NumTest
 		// maybe for some flavor, have the output be a vaguely passive aggressive message, like the sample I give here
 		TEST_METHOD(TestReConvert) {
 			// 0 = starting anger
-			StringConverter str = new StringConverter(0);
+			StringConverter str = new StringConverter();
 			string expected = "This SHOULD be one two.";
 			string actual = str.reConvert(12);
 			Assert::AreEqual(expected, actual);
 		}
 
-
+		*/
 	};
 }
