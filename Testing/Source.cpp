@@ -1,6 +1,6 @@
 using namespace std;
 
-class closeClass {
+class numClass {
 public:
 	bool thisIsTrue() {
 		return true;
