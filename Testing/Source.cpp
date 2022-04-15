@@ -13,7 +13,6 @@ public:
 		string intString = "";
 		istringstream iss(input);
 		do {
-			cout << "Intstring: " << intString << endl;
 			string word;
 			iss >> word;
 			//Ugly if-else because C++ doesn't like switches with strings.
