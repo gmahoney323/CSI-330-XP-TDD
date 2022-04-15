@@ -13,6 +13,7 @@ public:
 		string intString = "";
 		istringstream iss(input);
 		do {
+			cout << "Intstring: " << intString << endl;
 			string word;
 			iss >> word;
 			//Ugly if-else because C++ doesn't like switches with strings.
@@ -43,7 +44,7 @@ public:
 		return stoi(intString);
 	}
 
-	void checkForNumber(string& str) {
+	bool checkForNumber(string& str) {
 		for (char const& c : str) {
 			if (isdigit(c) != 0) {
 				increaseAnger(1);
@@ -51,13 +52,18 @@ public:
 				switch (angryPhrase) {
 				case 1:
 					cout << "Okay, " << c << " should NOT be in here." << endl;
+					break;
 				case 2:
 					cout << "Seriously. " << c << " is NOT valid. Do NOT use it." << endl;
+					break;
 				case 3:
 					cout << c << "? Really? That's not a number I can work with. Come on." << endl;
+					break;
 				}
+				return true;
 			}
 		}
+		return false;
 	}
 
 	int addConvert(string expression) {
@@ -86,17 +92,19 @@ public:
 			string subString;
 			cout << "Enter your expression: ";
 			getline(cin, subString);
-			checkForNumber(subString);
-
-			if (subString.find("plus")) {
-				cout << addConvert(subString);
+			if (checkForNumber(subString)) {
+				cout << "Spell it out for me!\n";
 			}
 
-			else if (subString.find("minus")) {
-				cout << minusConvert(subString);
+			else if (subString.find("plus") != -1) {
+				cout << addConvert(subString) << endl;
+			}
+
+			else if (subString.find("minus") != -1) {
+				cout << minusConvert(subString) << endl;
 			}
 			else
-				cout << "Invalid input.";
+				cout << "Invalid input.\n";
 		} while (true);
 	}
 
@@ -147,9 +155,9 @@ private:
 
 int main() {
 	//manual test
-	//StringConverter strCon;
+	StringConverter strCon;
 	//cout << strCon.convertStringInput("one two nine seven");
-	//strCon.getUserInput();
+	strCon.getUserInput();
 	//cout << strCon.reConvert(12);
 	return 0;
 }
