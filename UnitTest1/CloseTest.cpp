@@ -9,7 +9,6 @@ namespace NumTest
 	TEST_CLASS(NumTest)
 	{
 	public:
-		
 		// Grant's tests
 		TEST_METHOD(TestConvertInput)
 		{
@@ -36,20 +35,20 @@ namespace NumTest
 			int actual = str.getAnger();
 			Assert::AreEqual(expected, actual);
 		}
-		/*
+		
 		// Collin's tests
 		TEST_METHOD(TestAddition)
 		{
 			StringConverter str;
 
 			// maybe have it consider whether the second number should be + or - based on 'plus' or 'minus'
-			string expected1 = 17;
-			string actual1 = str.addConvert("two plus one two");
-			Assert::AreEqual(expected, actual);
+			int expected1 = 14;
+			int actual1 = str.addConvert("two plus one two");
+			Assert::AreEqual(expected1, actual1);
 
-			string expected2 = "three";
-			string actual2 = str.addConvert("nine minus six");
-			Assert::AreEqual(expected, actual);
+			int expected2 = 3;
+			int actual2 = str.minusConvert("nine minus six");
+			Assert::AreEqual(expected2, actual2);
 		}
 
 		// secret feature
@@ -62,7 +61,5 @@ namespace NumTest
 			string actual = str.reConvert(12);
 			Assert::AreEqual(expected, actual);
 		}
-
-		*/
 	};
 }
