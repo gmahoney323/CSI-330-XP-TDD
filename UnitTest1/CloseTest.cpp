@@ -19,11 +19,7 @@ namespace NumTest
 			Assert::AreEqual(expected, actual);
 		}
 
-		// secret feature
-		// if you input an actual number (int instead of string) the program will get increasingly "mad"
-		// if you input a number too many times, it will quit
-		// could have a clause in the function for getting input that will increase anger member variable when given int input
-		// maybe have a funny message get printed to console each time program gets mad
+		
 		TEST_METHOD(TestAnger) {
 			// 0 = starting anger
 			// will do this normally by checking in input function
@@ -51,9 +47,7 @@ namespace NumTest
 			Assert::AreEqual(expected2, actual2);
 		}
 
-		// secret feature
-		// you can choose to reconvert a number to its word form
-		// maybe for some flavor, have the output be a vaguely passive aggressive message, like the sample I give here
+
 		TEST_METHOD(TestReConvert) {
 			// 0 = starting anger
 			StringConverter str;
